@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="75dp"
+        android:maxHeight="75dp"
+        android:minWidth="50dp"
+        android:minHeight="50dp"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kullaniciAdi"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tarih"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yorum"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

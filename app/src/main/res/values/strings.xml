@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Blog</string>
+    <string name="politika"><b>Gizlilik Politikası</b>\nİzinler ve Gizlilik Politikası</string>
+    <string name="oyla"><b>Oyla</b>\nGeri Bildirim Gönder</string>
+    <string name="sirket"><b>Efdal İncesu</b>\nDiğer Projelerimiz</string>
+    <string name="info"><b>Hakkımızda</b></string>
+</resources>
