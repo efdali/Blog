@@ -1,19 +1,15 @@
 package com.efdalincesu.blog.View;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.SearchView;
 
 import com.efdalincesu.blog.R;
 import com.efdalincesu.blog.Utils.AuthTask;
 import com.efdalincesu.blog.View.Adapters.CustomFragmentAdapter;
-import com.efdalincesu.blog.View.Fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,29 +17,29 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     CustomFragmentAdapter fragmentAdapter;
 
-    BottomNavigationView.OnNavigationItemSelectedListener listener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+    BottomNavigationView.OnNavigationItemSelectedListener listener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            int id=item.getItemId();
+            int id = item.getItemId();
 
-            switch (id){
+            switch (id) {
 
                 case R.id.home:
                     viewPager.setCurrentItem(0);
                     break;
-
                 case R.id.category:
                     viewPager.setCurrentItem(1);
                     break;
-
-                case R.id.profile:
+                case R.id.favorite:
                     viewPager.setCurrentItem(2);
+                    break;
+                case R.id.profile:
+                    viewPager.setCurrentItem(3);
                     break;
 
 
             }
-
 
 
             return true;
@@ -60,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void initialize(){
+    public void initialize() {
 
         AuthTask.init(getApplicationContext());
-        viewPager=findViewById(R.id.viewPager);
-        bottomNavigationView=findViewById(R.id.bottomNav);
-        fragmentAdapter=new CustomFragmentAdapter(getSupportFragmentManager());
+        viewPager = findViewById(R.id.viewPager);
+        bottomNavigationView = findViewById(R.id.bottomNav);
+        fragmentAdapter = new CustomFragmentAdapter(getSupportFragmentManager());
         viewPager.setAdapter(fragmentAdapter);
         bottomNavigationView.setOnNavigationItemSelectedListener(listener);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -84,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
 
     }

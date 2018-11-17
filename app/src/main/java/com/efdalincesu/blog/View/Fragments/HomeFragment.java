@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
         articles = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recyclerView);
+
         imageView = view.findViewById(R.id.imageView);
         relativeLayout = view.findViewById(R.id.relativeLayout);
         baslik = view.findViewById(R.id.baslik);

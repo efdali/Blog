@@ -61,4 +61,7 @@ public interface RestApi {
 
     @GET("shareComment.php")
     Call<Result> IshareComment(@Query("yaziId") String yaziId,@Query("kullaniciId") String kullaniciId,@Query("yorum") String yorum);
+
+    @GET("getFavorite.php")
+    Call<List<Article>> getFavorite(@Query("kullaniciId") String kullaniciId);
 }

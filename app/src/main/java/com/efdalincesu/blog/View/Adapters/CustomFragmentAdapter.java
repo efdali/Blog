@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.efdalincesu.blog.View.Fragments.CategoryFragment;
+import com.efdalincesu.blog.View.Fragments.FavoriteFragment;
 import com.efdalincesu.blog.View.Fragments.HomeFragment;
 import com.efdalincesu.blog.View.Fragments.ProfileFragment;
 
@@ -25,6 +26,8 @@ public class CustomFragmentAdapter extends FragmentPagerAdapter {
         }else if(position==1){
             fragment=new CategoryFragment();
         }else if(position==2){
+            fragment=new FavoriteFragment();
+        }else if(position==3){
             fragment=new ProfileFragment();
         }
 
@@ -33,6 +36,6 @@ public class CustomFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }

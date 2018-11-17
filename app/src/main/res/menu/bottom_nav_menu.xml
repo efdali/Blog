@@ -9,6 +9,10 @@
         android:title="Kategori"
         android:icon="@drawable/bottom_menu_category"/>
 
+    <item android:id="@+id/favorite"
+        android:title="Beğeniler"
+        android:icon="@drawable/bottom_menu_fav"/>
+
     <item android:id="@+id/profile"
         android:title="Profil"
         android:icon="@drawable/bottom_menu_profile"/>

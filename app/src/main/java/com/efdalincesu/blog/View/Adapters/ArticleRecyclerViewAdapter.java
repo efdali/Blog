@@ -93,12 +93,9 @@ public class ArticleRecyclerViewAdapter extends RecyclerView.Adapter<ArticleRecy
                     ArrayList<Article> articles=new ArrayList<>();
 
                     for (Article article : articleList){
-                        Log.d("eklendi",article.getYaziBaslik().toLowerCase()+" yazi İçerik");
-                        Log.d("eklendi",article.getYaziBaslik().toLowerCase().contains(searchString)+"  eşitmi yazi");
                         if (article.getYaziBaslik().toLowerCase().contains(searchString)){
                             articles.add(article);
                         }
-                        Log.d("eklendi", articles.size()+" size");
                     }
 
 

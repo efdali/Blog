@@ -108,4 +108,11 @@ public class ManagerAll extends BaseManager {
 
         return call;
     }
+
+    public Call<List<Article>> getFavorite(String kullaniciId) {
+
+        Call<List<Article>> call = getRestApi().getFavorite(kullaniciId);
+
+        return call;
+    }
 }
